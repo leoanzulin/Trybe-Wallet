@@ -10,7 +10,7 @@ ReactDOM
   .render(
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>, // iniciando
   );
 
 // If you want your app to work offline and load faster, you can change
