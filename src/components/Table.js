@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { deleteItem } from '../redux/actions/formActions';
 
 class Table extends Component {
   render() {
-    const { expenses } = this.props;
+    const { expenses, dispatch } = this.props;
     return (
       <div>
         <table>
@@ -41,6 +42,16 @@ class Table extends Component {
                     .toFixed(2)}
                 </td>
                 <td>REAL</td>
+                <td>
+                  <button
+                    type="button"
+                    data-testid="delete-btn"
+                    onClick={ () => dispatch(deleteItem(expencie.id)) }
+                  >
+                    delete
+                  </button>
+
+                </td>
               </tr>
             ))}
           </tbody>
@@ -52,6 +63,7 @@ class Table extends Component {
 }
 
 Table.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   expenses: PropTypes.shape({
     map: PropTypes.func,
   }).isRequired,
