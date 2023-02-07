@@ -46,6 +46,7 @@ class WalletForm extends Component {
           <input
             type="text"
             data-testid="value-input"
+            placeholder="Valor"
             name="value"
             value={ value }
             onChange={ this.handleChange }
@@ -53,6 +54,7 @@ class WalletForm extends Component {
           <input
             type="text"
             data-testid="description-input"
+            placeholder="Descrição"
             name="description"
             value={ description }
             onChange={ this.handleChange }

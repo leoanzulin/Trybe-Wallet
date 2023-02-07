@@ -44,11 +44,13 @@ class Login extends React.Component {
         <form>
           <input
             type="email"
+            placeholder="Email"
             data-testid="email-input"
             onChange={ this.handleChangeEmail }
           />
           <input
             type="text"
+            placeholder="Senha"
             data-testid="password-input"
             onChange={ this.handleChangePassword }
           />
