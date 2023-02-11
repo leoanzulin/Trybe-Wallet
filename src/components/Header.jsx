@@ -3,31 +3,31 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Header extends Component {
-  despesas = (expenses) => {
-    let atualValue = 0;
+  totalExpenses = (expenses) => {
+    let currValue = 0;
     expenses.forEach((expense) => {
-      atualValue += expense.value * expense.exchangeRates[expense.currency].ask;
+      currValue += expense.value * expense.exchangeRates[expense.currency].ask;
     });
-    return atualValue.toFixed(2);
+    return currValue.toFixed(2);
   };
 
   render() {
     const { email, expenses } = this.props;
-    const moeda = 'BRL';
+    const currency = 'BRL';
     return (
-      <div>
+      <header>
         <h2 data-testid="email-field">
           {email}
         </h2>
         <h2 data-testid="total-field">
-          { this.despesas(expenses) }
+          { this.totalExpenses(expenses) }
         </h2>
         <h2 data-testid="header-currency-field">
           Câmbio utilizado:
           {' '}
-          {moeda}
+          {currency}
         </h2>
-      </div>
+      </header>
     );
   }
 }

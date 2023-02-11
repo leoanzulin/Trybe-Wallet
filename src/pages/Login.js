@@ -8,15 +8,10 @@ class Login extends React.Component {
   state = {
     email: '',
     password: '',
-
   };
 
-  handleChangeEmail = ({ target }) => {
-    this.setState({ email: target.value });
-  };
-
-  handleChangePassword = ({ target }) => {
-    this.setState({ password: target.value });
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
   };
 
   handleClick = () => {
@@ -33,26 +28,28 @@ class Login extends React.Component {
 
   disabledButton = () => {
     const { password, email } = this.state;
-    const magicNumber = 6;
-    return (password.length < magicNumber || !this.validateEmail(email));
+    const minCharacters = 6;
+    return (password.length < minCharacters || !this.validateEmail(email));
   };
 
   render() {
     return (
-      <div>
-        <h1>LOGIN TRYBE WALLET</h1>
+      <main>
+        <h1>TRYBE WALLET</h1>
         <form>
           <input
             type="email"
             placeholder="Email"
             data-testid="email-input"
-            onChange={ this.handleChangeEmail }
+            name="email"
+            onChange={ this.handleChange }
           />
           <input
             type="text"
             placeholder="Senha"
             data-testid="password-input"
-            onChange={ this.handleChangePassword }
+            name="password"
+            onChange={ this.handleChange }
           />
           <button
             type="button"
@@ -62,7 +59,7 @@ class Login extends React.Component {
             Entrar
           </button>
         </form>
-      </div>
+      </main>
     );
   }
 }

@@ -40,7 +40,7 @@ class WalletForm extends Component {
     const { currencies } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
-      <div>
+      <main>
         <h2>WalletForm</h2>
         <form>
           <input
@@ -93,7 +93,7 @@ class WalletForm extends Component {
           </select>
           <button type="button" onClick={ this.handleClick }>Adicionar despesa</button>
         </form>
-      </div>
+      </main>
     );
   }
 }

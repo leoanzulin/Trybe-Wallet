@@ -7,7 +7,7 @@ class Table extends Component {
   render() {
     const { expenses, dispatch } = this.props;
     return (
-      <div>
+      <section>
         <table>
           <thead>
             <th>Descrição</th>
@@ -21,23 +21,23 @@ class Table extends Component {
             <th>Editar/Excluir</th>
           </thead>
           <tbody>
-            {expenses.map((expencie) => (
-              <tr key={ expencie.id }>
-                <td>{expencie.description}</td>
-                <td>{expencie.tag}</td>
-                <td>{expencie.method}</td>
-                <td>{Number(expencie.value).toFixed(2)}</td>
-                <td>{expencie.exchangeRates[expencie.currency].name}</td>
+            {expenses.map((expense) => (
+              <tr key={ expense.id }>
+                <td>{expense.description}</td>
+                <td>{expense.tag}</td>
+                <td>{expense.method}</td>
+                <td>{Number(expense.value).toFixed(2)}</td>
+                <td>{expense.exchangeRates[expense.currency].name}</td>
                 <td>
                   {Number(
-                    expencie.exchangeRates[expencie.currency].ask,
+                    expense.exchangeRates[expense.currency].ask,
                   )
                     .toFixed(2)}
 
                 </td>
                 <td>
                   {Number(
-                    expencie.value * expencie.exchangeRates[expencie.currency].ask,
+                    expense.value * expense.exchangeRates[expense.currency].ask,
                   )
                     .toFixed(2)}
                 </td>
@@ -46,7 +46,7 @@ class Table extends Component {
                   <button
                     type="button"
                     data-testid="delete-btn"
-                    onClick={ () => dispatch(deleteItem(expencie.id)) }
+                    onClick={ () => dispatch(deleteItem(expense.id)) }
                   >
                     delete
                   </button>
@@ -57,7 +57,7 @@ class Table extends Component {
           </tbody>
 
         </table>
-      </div>
+      </section>
     );
   }
 }
