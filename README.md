@@ -19,8 +19,8 @@ npm start
 Uso:
 Ao iniciar a aplicação, você será levado para a tela inicial da Trybe-Wallet para fazer login, após o login você poderá adicionar suas despesas em qualquer moeda disponivel na aplicação e ver a conversão para reais. A soma total de todos os gastos será exibida na parte superior da página.
 
-Contribuição
+Contribuição:
 Este projeto é de código aberto e qualquer pessoa é bem-vinda para contribuir. Se você tiver alguma sugestão ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou fazer um pull request.
 
-Licença
+Licença:
 Este projeto está licenciado sob a licença MIT. Para mais informações, consulte o arquivo de licença.
