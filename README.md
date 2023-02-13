@@ -7,6 +7,8 @@ Conversão para reais
 Mostra a soma total de todos os gastos adicionados
 Armazenamento de dados para que você possa acessar suas informações financeiras a qualquer momento
 
+Deploy: https://trybe-wallet-ruddy.vercel.app/
+
 Instalação:
 Faça o clone deste repositório para sua máquina local
 
