@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import logo from '../img/logo.png';
+import coin from '../img/coin.png';
+import user from '../img/user.png';
 
 class Header extends Component {
   totalExpenses = (expenses) => {
@@ -16,17 +19,25 @@ class Header extends Component {
     const currency = 'BRL';
     return (
       <header>
-        <h2 data-testid="email-field">
-          {email}
-        </h2>
-        <h2 data-testid="total-field">
-          { this.totalExpenses(expenses) }
-        </h2>
-        <h2 data-testid="header-currency-field">
-          Câmbio utilizado:
-          {' '}
-          {currency}
-        </h2>
+        <img src={ logo } alt="logo-header" className="logo-header" />
+        <div className="totalExpenses">
+          <img src={ coin } alt="moedas" />
+          <h2>
+            Total de despesas:
+          </h2>
+          <h2>
+            { this.totalExpenses(expenses) }
+          </h2>
+          <h2>
+            {currency}
+          </h2>
+        </div>
+        <div className="user">
+          <img src={ user } alt="user-logo" />
+          <p>
+            {email}
+          </p>
+        </div>
       </header>
     );
   }

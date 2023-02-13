@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { addLoginInfos } from '../redux/actions';
+import './Login.css';
+import logo from '../img/logo.png';
 
 class Login extends React.Component {
   state = {
@@ -34,20 +36,18 @@ class Login extends React.Component {
 
   render() {
     return (
-      <main>
-        <h1>TRYBE WALLET</h1>
-        <form>
+      <main className="loginPage">
+        <img src={ logo } alt="logo" className="logo " />
+        <form className="container-login">
           <input
             type="email"
             placeholder="Email"
-            data-testid="email-input"
             name="email"
             onChange={ this.handleChange }
           />
           <input
             type="text"
             placeholder="Senha"
-            data-testid="password-input"
             name="password"
             onChange={ this.handleChange }
           />
@@ -55,6 +55,7 @@ class Login extends React.Component {
             type="button"
             onClick={ this.handleClick }
             disabled={ this.disabledButton() }
+            className={ this.disabledButton() ? 'disableBtn' : 'enableBtn' }
           >
             Entrar
           </button>

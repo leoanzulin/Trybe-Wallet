@@ -2,14 +2,15 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteItem } from '../redux/actions/formActions';
+import deleteIcon from '../img/delete.png';
 
 class Table extends Component {
   render() {
     const { expenses, dispatch } = this.props;
     return (
-      <section>
+      <section className="container-table">
         <table>
-          <thead>
+          <thead className="thead">
             <th>Descrição</th>
             <th>Tag</th>
             <th>Método de pagamento</th>
@@ -18,7 +19,7 @@ class Table extends Component {
             <th>Câmbio utilizado</th>
             <th>Valor convertido</th>
             <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            <th className="ultimo">Excluir</th>
           </thead>
           <tbody>
             {expenses.map((expense) => (
@@ -45,10 +46,10 @@ class Table extends Component {
                 <td>
                   <button
                     type="button"
-                    data-testid="delete-btn"
+                    className="delete-btn"
                     onClick={ () => dispatch(deleteItem(expense.id)) }
                   >
-                    delete
+                    <img src={ deleteIcon } alt="" />
                   </button>
 
                 </td>

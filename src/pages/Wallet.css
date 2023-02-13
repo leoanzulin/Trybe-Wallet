@@ -1,0 +1,243 @@
+.container-wallet {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+}
+
+.container-header {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgb(5 18 54 / 40%);
+  display: flex;
+  flex-direction: column;
+  height: 385px;
+  position: absolute;
+  width: 80%;
+}
+
+.container-form {
+  background: #003be5;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgb(3 107 82 / 30%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 564px;
+  justify-content: center;
+  margin-top: 190px;
+  padding-top: 140px;
+  width: 90%;
+}
+
+.wallet-form {
+  align-items: center;
+  align-self: center;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  width: 80%;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.totalExpenses {
+  align-items: center;
+  color: #003be5;
+  display: flex;
+  gap: 0.5%;
+  width: 30%;
+}
+
+.logo-header {
+  width: 30%;
+}
+
+.user {
+  color: #2fc18c;
+  display: flex;
+  gap: 3%;
+  width: 30%;
+}
+
+.wallet-form form {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  gap: 5%;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.wallet-form label {
+  align-items: center;
+  color: #003be5;
+  display: flex;
+  font-weight: 700;
+  gap: 1em;
+  justify-content: center;
+}
+
+.wallet-form input {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  height: 7px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.container-table {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 5%;
+  padding-top: 8%;
+  width: 100%;
+}
+
+table {
+  border: 1px solid #2fc18c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+}
+
+th {
+  border-right: 1px solid white;
+  width: 10%;
+}
+
+tbody {
+  background-color: #003be5;
+  color: #2fc18c;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+tbody::-webkit-scrollbar {
+  width: 12px;
+}
+
+tbody::-webkit-scrollbar-track {
+  background: blue;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: #2fc18c;
+  border: 3px solid #2fc18c;
+  border-radius: 20px;
+}
+
+td {
+  border-top: 1px solid white;
+  text-align: center;
+  width: 10%;
+}
+
+.ultimo {
+  border: none;
+}
+
+select {
+  font-size: 15px;
+  height: 2rem;
+}
+
+#container-one {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  text-align: center;
+  width: 900px;
+}
+
+.container-two {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 900px;
+}
+
+.inputDescription {
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 288.86px;
+}
+
+.inputTag {
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  width: 245px;
+}
+
+.inputValue {
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 158px;
+}
+
+.inputMethod {
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  width: 228px;
+}
+
+.inputCurrency {
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  width: 91px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 6px;
+  width: 50px;
+}
+
+.wallet-form button {
+  background: #2fc18c;
+  border: 1px solid #21c98b;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  margin-bottom: 5%;
+  width: 20%;
+}
