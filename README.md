@@ -1,4 +1,4 @@
-Projeto Trybe-Wallet
+Projeto Trybe-Wallet,
 Esta é uma carteira virtual que permite adicionar despesas em diversas moedas e converte para reais, mostrando a soma total de todos os gastos adicionados. Com esta aplicação, você poderá acompanhar seus gastos em tempo real e ter uma visão geral de suas finanças.
 
 Recursos:
